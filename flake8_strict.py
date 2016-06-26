@@ -140,7 +140,7 @@ def _process_atom(atom):
         return
 
     left = atom.children[0]
-    if left.value not in {'{', '['}:
+    if left.value not in ('{', '['):
         return
     open_parenthesis, maker, close_parenthesis = atom.children
     if open_parenthesis.lineno == maker.get_lineno():
